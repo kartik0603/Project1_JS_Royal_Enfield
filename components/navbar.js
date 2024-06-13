@@ -1,8 +1,8 @@
 // components/navbar.js
 const navbar_RE = () => {
   return `
-      <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar_RE">
-          <div class="container-fluid bg-black">
+      <nav class="navbar navbar-expand-lg bg-black" id="navbar_RE">
+          <div class="container-fluid ">
               <a class="navbar-brand" href="index.html">
                   <img src="../Images/RE nav logo.png" alt="Logo" width="150" height="26" class="d-inline-block align-text-top ms-4">
               </a>
