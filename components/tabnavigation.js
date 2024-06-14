@@ -1,11 +1,13 @@
 function openTab(event, tabId) {
     var i, tabcontent, tablinks;
 
+  
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
+  
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
@@ -18,11 +20,20 @@ function openTab(event, tabId) {
 }
 
 function loadDefaultTab() {
+  
     var defaultTabId = localStorage.getItem("selectedTab") || "tab1";
+
+
     document.getElementById(defaultTabId).style.display = "block";
-    document.querySelector(".tablinks[data-tab-id='" + defaultTabId + "']").classList.add("active");
+
+    
+    var activeTabLink = document.querySelector(".tablinks[data-tab-id='" + defaultTabId + "']");
+    if (activeTabLink) {
+        activeTabLink.classList.add("active");
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+
     loadDefaultTab();
 });
