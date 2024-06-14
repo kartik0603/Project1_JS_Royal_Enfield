@@ -77,7 +77,7 @@
         border-radius: 15px;
       }
 
-      /* Style the active tab button */
+      
       .tablinks.active {
         /* background-color: #ddd; */
         color: red;
@@ -87,14 +87,14 @@
         border-radius: 15px;
       }
 
-      /* Style the tab content */
+     
       .tabcontent {
         display: none;
-        /* Hide all tab content by default */
+      
         padding: 20px;
         /* border: 1px solid #ccc */
         margin-top: -1px;
-        /* Ensure no visible gap between tabs */
+     
       }
     </style>
   </head>
@@ -150,84 +150,48 @@
       <p class="h3 text-white">Motorcycles</p>
     </div>
     <div class="tab-container">
-      <div class="tablinks" onclick="openTab(event, 'tab1')">Shot Gun 650</div>
-      <div class="tablinks" onclick="openTab(event, 'tab2')">New Himalayan</div>
-      <div class="tablinks" onclick="openTab(event, 'tab3')">Bullet 350</div>
-      <div class="tablinks" onclick="openTab(event, 'tab4')">Interceptor</div>
-      <div class="tablinks" onclick="openTab(event, 'tab5')">
-        Continental GT
-      </div>
-      <div class="tablinks" onclick="openTab(event, 'tab6')">
-        Super Meteor 650
-      </div>
-      <div class="tablinks" onclick="openTab(event, 'tab7')">Hunter 350</div>
-      <div class="tablinks" onclick="openTab(event, 'tab8')">Scram 411</div>
-      <div class="tablinks" onclick="openTab(event, 'tab9')">Classic</div>
-      <div class="tablinks" onclick="openTab(event, 'tab10')">Meteor 350</div>
+      <div class="tablinks" data-tab-id="tab1" onclick="openTab(event, 'tab1')">Shot Gun 650</div>
+      <div class="tablinks" data-tab-id="tab2" onclick="openTab(event, 'tab2')">New Himalayan</div>
+      <div class="tablinks" data-tab-id="tab3" onclick="openTab(event, 'tab3')">Bullet 350</div>
+      <div class="tablinks" data-tab-id="tab4" onclick="openTab(event, 'tab4')">Interceptor</div>
+      <div class="tablinks" data-tab-id="tab5" onclick="openTab(event, 'tab5')">Continental GT</div>
+      <div class="tablinks" data-tab-id="tab6" onclick="openTab(event, 'tab6')">Super Meteor 650</div>
+      <div class="tablinks" data-tab-id="tab7" onclick="openTab(event, 'tab7')">Hunter 350</div>
+      <div class="tablinks" data-tab-id="tab8" onclick="openTab(event, 'tab8')">Scram 411</div>
+      <div class="tablinks" data-tab-id="tab9" onclick="openTab(event, 'tab9')">Classic</div>
+      <div class="tablinks" data-tab-id="tab10" onclick="openTab(event, 'tab10')">Meteor 350</div>
 
       <div id="tab1" class="tabcontent">
-        <img class="img-fluid" src="Images/shotgun-650-motorcycle.jpg" alt="" />
+          <img class="img-fluid" src="Images/shotgun-650-motorcycle.jpg" alt="" />
       </div>
-
       <div id="tab2" class="tabcontent">
-        <img
-          class="img-fluid"
-          src="Images/himalayan-home-motorcycle.jpg"
-          alt=""
-        />
+          <img class="img-fluid" src="Images/himalayan-home-motorcycle.jpg" alt="" />
       </div>
-
       <div id="tab3" class="tabcontent">
-        <img class="img-fluid" src="Images/bullet-350-new.jpg" alt="" />
+          <img class="img-fluid" src="Images/bullet-350-new.jpg" alt="" />
       </div>
-
       <div id="tab4" class="tabcontent">
-        <img
-          class="img-fluid"
-          src="Images/interceptor_650_motorcycle.jpg"
-          alt=""
-        />
+          <img class="img-fluid" src="Images/interceptor_650_motorcycle.jpg" alt="" />
       </div>
-
       <div id="tab5" class="tabcontent">
-        <img
-          class="img-fluid"
-          src="Images/continental_gt_650_motorcycle.jpg"
-          alt=""
-        />
+          <img class="img-fluid" src="Images/continental_gt_650_motorcycle.jpg" alt="" />
       </div>
-
       <div id="tab6" class="tabcontent">
-        <img class="img-fluid" src="Images/super-meteor-650.jpg" alt="" />
+          <img class="img-fluid" src="Images/super-meteor-650.jpg" alt="" />
       </div>
-
       <div id="tab7" class="tabcontent">
-        <img class="img-fluid" src="Images/hunter-350-motorcycle.jpg" alt="" />
+          <img class="img-fluid" src="Images/hunter-350-motorcycle.jpg" alt="" />
       </div>
-
       <div id="tab8" class="tabcontent">
-        <img
-          class="img-fluid"
-          src="Images/scram-411-home-motorcycle.jpg"
-          alt=""
-        />
+          <img class="img-fluid" src="Images/scram-411-home-motorcycle.jpg" alt="" />
       </div>
-
       <div id="tab9" class="tabcontent">
-        <img
-          class="img-fluid"
-          src="Images/classic-350-motorcycle-section.jpg"
-          alt=""
-        />
+          <img class="img-fluid" src="Images/classic-350-motorcycle-section.jpg" alt="" />
       </div>
       <div id="tab10" class="tabcontent">
-        <img
-          class="img-fluid"
-          src="Images/meteor-350-home-motorcycle.jpg"
-          alt=""
-        />
+          <img class="img-fluid" src="Images/meteor-350-home-motorcycle.jpg" alt="" />
       </div>
-    </div>
+  </div>
 
     <script src="/components/tabnavigation.js"></script>
 

@@ -1,4 +1,3 @@
-  
 function openTab(event, tabId) {
     var i, tabcontent, tablinks;
 
@@ -12,22 +11,17 @@ function openTab(event, tabId) {
         tablinks[i].classList.remove("active");
     }
 
-   
     document.getElementById(tabId).style.display = "block";
-
     event.currentTarget.classList.add("active");
 
-   
     localStorage.setItem("selectedTab", tabId);
 }
 
 function loadDefaultTab() {
-    var defaultTabId = localStorage.getItem("selectedTab") || "tab1"; 
-    document.getElementById(defaultTabId).style.display = "block"; 
-    document.querySelector(".tablinks[data-tab-id='" + defaultTabId + "']").classList.add("active"); 
+    var defaultTabId = localStorage.getItem("selectedTab") || "tab1";
+    document.getElementById(defaultTabId).style.display = "block";
+    document.querySelector(".tablinks[data-tab-id='" + defaultTabId + "']").classList.add("active");
 }
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
     loadDefaultTab();
