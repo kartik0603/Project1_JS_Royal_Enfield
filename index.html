@@ -1,235 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bikes In India | New Bikes 2024 | Royal Enfield India</title>
-    <link rel="shortcut icon" href="/Images/royalEnfield_logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/Images/royalEnfield_logo.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/bootstrap.min.css" />
     <script src="/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/styles/swiper.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            overflow-x: hidden;
-            background-color: black;
-        }
+      body {
+        overflow-x: hidden;
+        background-color: black;
+      }
 
-        .RE_news_img {
-            width: 320px;
-            height: auto;
-            margin: 0px;
-            transition: transform 0.3s ease;
-        }
+      .RE_news_img {
+        width: 320px;
+        height: auto;
+        margin: 0px;
+        transition: transform 0.3s ease;
+      }
 
-        .RE_news_img {
-            transform: scale(1.01);
-        }
+      .RE_news_img {
+        transform: scale(1.01);
+      }
 
+      .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 767px) {
         .image-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 100%;
-            margin: 0 auto;
+          flex-direction: column;
+          align-items: center;
         }
+      }
 
-        @media (max-width: 767px) {
-            .image-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+      /* Container for tab navigation */
+      .tab-container {
+        text-align: center;
+        /* Center align content horizontally */
+        max-width: 100%;
+        /* Ensure container doesn't exceed screen width */
+        margin: 0 auto;
+        /* Center align container */
+      }
 
-        /* Container for tab navigation */
-        .tab-container {
-            text-align: center;
-            /* Center align content horizontally */
-            max-width: 100%;
-            /* Ensure container doesn't exceed screen width */
-            margin: 0 auto;
-            /* Center align container */
-        }
+      .tablinks {
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        padding: 5px;
+        cursor: pointer;
+        margin: 10px;
 
-        .tablinks {
-            font-size: 16px;
-            font-weight: 600;
-            color: white;
-            padding: 5px;
-            cursor: pointer;
-            margin: 10px;
+        display: inline-block;
+        border: 1.5px dotted rgb(255, 0, 0);
+        border-radius: 15px;
+      }
 
-            display: inline-block;
-            border: 1.5px dotted rgb(255, 0, 0);
-            border-radius: 15px;
-        }
+      /* Style the active tab button */
+      .tablinks.active {
+        /* background-color: #ddd; */
+        color: red;
+        font-size: 18px;
+        font-weight: 600;
+        border: 1.5px dotted white;
+        border-radius: 15px;
+      }
 
-        /* Style the active tab button */
-        .tablinks.active {
-            /* background-color: #ddd; */
-            color: red;
-            font-size: 18px;
-            font-weight: 600;
-            border: 1.5px dotted white;
-            border-radius: 15px;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            /* Hide all tab content by default */
-            padding: 20px;
-            /* border: 1px solid #ccc */
-            margin-top: -1px;
-            /* Ensure no visible gap between tabs */
-        }
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        /* Hide all tab content by default */
+        padding: 20px;
+        /* border: 1px solid #ccc */
+        margin-top: -1px;
+        /* Ensure no visible gap between tabs */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- navbar start -->
     <div id="navbarContainer"></div>
     <!-- navbar end -->
 
-    <!-- Swiper Baneer Start -->
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="/Images/RE_banner_1.jpg" class="img-fluid" alt="..." />
-            </div>
-            <div class="swiper-slide">
-                <img src="/Images/RE_banner_2.jpg" class="img-fluid" alt="..." />
-            </div>
-            <div class="swiper-slide">
-                <img src="/Images/RE_banner_3.jpg" class="img-fluid" alt="..." />
-            </div>
-            <div class="swiper-slide">
-                <img src="/Images/RE_banner_4.jpg" class="img-fluid" alt="..." />
-            </div>
-            <div class="swiper-slide">
-                <img src="/Images/RE_banner_5.jpg" class="img-fluid" alt="..." />
-            </div>
-            <div class="swiper-slide">
-                <img src="/Images/RE_banner_6.jpg" class="img-fluid" alt="..." />
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </div>
+    <!-- swiper start -->
+    <div id="swipercontainer"></div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/components/swiper.js"></script>
-    <!-- Swiper Banner End -->
+    <!-- swiper End -->
 
     <!-- news_RE_container_start -->
     <div class="container-fluid">
-        <div style="
+      <div
+        style="
           width: 100vw;
           height: 100%;
           background-color: black;
           display: flex;
           justify-content: center;
           align-items: center;
-        ">
-            <p class="h3 text-white">News And Media</p>
-        </div>
+        "
+      >
+        <p class="h3 text-white">News And Media</p>
+      </div>
 
-        <div class="image-container">
-            <img class="RE_news_img" src="/Images/RE_news_img_1.jpg" alt="" />
+      <div class="image-container">
+        <img class="RE_news_img" src="/Images/RE_news_img_1.jpg" alt="" />
 
-            <img class="RE_news_img" src="/Images/RE_news_img_2.jpg" alt="" />
+        <img class="RE_news_img" src="/Images/RE_news_img_2.jpg" alt="" />
 
-            <img class="RE_news_img" src="/Images/RE_news_img_3.jpg" alt="" />
+        <img class="RE_news_img" src="/Images/RE_news_img_3.jpg" alt="" />
 
-            <img class="RE_news_img" src="/Images/RE_news_img_4.jpg" alt="" />
-        </div>
+        <img class="RE_news_img" src="/Images/RE_news_img_4.jpg" alt="" />
+      </div>
     </div>
     <!-- news_RE_container_End -->
 
     <!-- motorcycles -->
-    <div style="
+    <div
+      style="
         width: 100vw;
         height: 100%;
         background-color: black;
         display: flex;
         justify-content: center;
         align-items: center;
-      ">
-        <p class="h3 text-white">Motorcycles</p>
+      "
+    >
+      <p class="h3 text-white">Motorcycles</p>
     </div>
     <div class="tab-container">
-        <div class="tablinks" onclick="openTab(event, 'tab1')">Shot Gun350</div>
-        <div class="tablinks" onclick="openTab(event, 'tab2')">New Himalayan</div>
-        <div class="tablinks" onclick="openTab(event, 'tab3')">Bullet 350</div>
-        <div class="tablinks" onclick="openTab(event, 'tab4')">Interceptor</div>
-        <div class="tablinks" onclick="openTab(event, 'tab5')">
-            Continental GT
-        </div>
-        <div class="tablinks" onclick="openTab(event, 'tab6')">
-            Super Meteor 650
-        </div>
-        <div class="tablinks" onclick="openTab(event, 'tab7')">Hunter 350</div>
-        <div class="tablinks" onclick="openTab(event, 'tab8')">Scram 411</div>
-        <div class="tablinks" onclick="openTab(event, 'tab9')">Classic</div>
-        <div class="tablinks" onclick="openTab(event, 'tab10')">Meteor 350</div>
+      <div class="tablinks" onclick="openTab(event, 'tab1')">Shot Gun 650</div>
+      <div class="tablinks" onclick="openTab(event, 'tab2')">New Himalayan</div>
+      <div class="tablinks" onclick="openTab(event, 'tab3')">Bullet 350</div>
+      <div class="tablinks" onclick="openTab(event, 'tab4')">Interceptor</div>
+      <div class="tablinks" onclick="openTab(event, 'tab5')">
+        Continental GT
+      </div>
+      <div class="tablinks" onclick="openTab(event, 'tab6')">
+        Super Meteor 650
+      </div>
+      <div class="tablinks" onclick="openTab(event, 'tab7')">Hunter 350</div>
+      <div class="tablinks" onclick="openTab(event, 'tab8')">Scram 411</div>
+      <div class="tablinks" onclick="openTab(event, 'tab9')">Classic</div>
+      <div class="tablinks" onclick="openTab(event, 'tab10')">Meteor 350</div>
 
-        <div id="tab1" class="tabcontent">
-            <img class="img-fluid" src="Images/shotgun-650-motorcycle.jpg" alt="" />
-        </div>
+      <div id="tab1" class="tabcontent">
+        <img class="img-fluid" src="Images/shotgun-650-motorcycle.jpg" alt="" />
+      </div>
 
-        <div id="tab2" class="tabcontent">
-            <img class="img-fluid" src="Images/himalayan-home-motorcycle.jpg" alt="" />
-        </div>
+      <div id="tab2" class="tabcontent">
+        <img
+          class="img-fluid"
+          src="Images/himalayan-home-motorcycle.jpg"
+          alt=""
+        />
+      </div>
 
-        <div id="tab3" class="tabcontent">
-            <img class="img-fluid" src="Images/bullet-350-new.jpg" alt="" />
-        </div>
+      <div id="tab3" class="tabcontent">
+        <img class="img-fluid" src="Images/bullet-350-new.jpg" alt="" />
+      </div>
 
-        <div id="tab4" class="tabcontent">
-            <img class="img-fluid" src="Images/interceptor_650_motorcycle.jpg" alt="" />
-        </div>
+      <div id="tab4" class="tabcontent">
+        <img
+          class="img-fluid"
+          src="Images/interceptor_650_motorcycle.jpg"
+          alt=""
+        />
+      </div>
 
-        <div id="tab5" class="tabcontent">
-            <img class="img-fluid" src="Images/continental_gt_650_motorcycle.jpg" alt="" />
-        </div>
+      <div id="tab5" class="tabcontent">
+        <img
+          class="img-fluid"
+          src="Images/continental_gt_650_motorcycle.jpg"
+          alt=""
+        />
+      </div>
 
-        <div id="tab6" class="tabcontent">
-            <img class="img-fluid" src="Images/super-meteor-650.jpg" alt="" />
-        </div>
+      <div id="tab6" class="tabcontent">
+        <img class="img-fluid" src="Images/super-meteor-650.jpg" alt="" />
+      </div>
 
-        <div id="tab7" class="tabcontent">
-            <img class="img-fluid" src="Images/hunter-350-motorcycle.jpg" alt="" />
-        </div>
+      <div id="tab7" class="tabcontent">
+        <img class="img-fluid" src="Images/hunter-350-motorcycle.jpg" alt="" />
+      </div>
 
-        <div id="tab8" class="tabcontent">
-            <img class="img-fluid" src="Images/scram-411-home-motorcycle.jpg" alt="" />
-        </div>
+      <div id="tab8" class="tabcontent">
+        <img
+          class="img-fluid"
+          src="Images/scram-411-home-motorcycle.jpg"
+          alt=""
+        />
+      </div>
 
-        <div id="tab9" class="tabcontent">
-            <img class="img-fluid" src="Images/classic-350-motorcycle-section.jpg" alt="" />
-        </div>
-        <div id="tab10" class="tabcontent">
-            <img class="img-fluid" src="Images/meteor-350-home-motorcycle.jpg" alt="" />
-        </div>
+      <div id="tab9" class="tabcontent">
+        <img
+          class="img-fluid"
+          src="Images/classic-350-motorcycle-section.jpg"
+          alt=""
+        />
+      </div>
+      <div id="tab10" class="tabcontent">
+        <img
+          class="img-fluid"
+          src="Images/meteor-350-home-motorcycle.jpg"
+          alt=""
+        />
+      </div>
     </div>
 
     <script src="/components/tabnavigation.js"></script>
 
     <!-- motorcycles End -->
-</body>
-<script type="module">
-    import navbar_RE from "/components/navbar.js";
+  </body>
+  <script  type="module">
+    import swiperHTML from '/components/swiper.js';
+    import navbar_RE from '/components/navbar.js';
 
-    const navbarContainer = document.getElementById("navbarContainer");
+    const swipercontainer = document.getElementById('swipercontainer');
+    const navbarContainer = document.getElementById('navbarContainer');
 
+    swipercontainer.innerHTML = swiperHTML();
     navbarContainer.innerHTML = navbar_RE();
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 </script>
-
 </html>
